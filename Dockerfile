@@ -1,6 +1,5 @@
 FROM grafana/grafana:latest
- #COPY ./custom.ini /etc/grafana/grafana.ini
- #COPY ./plugins /var/lib/grafana/plugins
- #COPY ./provisioning /etc/grafana/provisioning
+
+# Preserve the official image startup behavior.
+# Pin a tested version or digest before using this lab beyond local learning.
 EXPOSE 3000
-CMD ["grafana-server", "--homepath=/usr/share/grafana", "--config=/etc/grafana/grafana.ini"]
